@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #add {
+        background-color: blue;
+        color: azure;
+    }
+
+    #del {
+        background-color: green;
+        color: azure;
+    }
+</style>
+
+<body>
+    <h1>Dinamic Web Page</h1>
+    <input type="text" id="textbox" name="textbox">
+    <button id="add"> 추가 </button>
+    <button id="del"> 삭제 </button>
+    <ul id="list"> </ul>
+</body>
+
+</html>
+
+<script>
+    const textbox = document.getElementById("textbox");
+    const add = document.getElementById("add");
+    const del = document.getElementById("del");
+    const list = document.getElementById("list");
+
+
+    add.addEventListener("click", () => {
+        if (textbox.value !== "") {
+            const arr = textbox.value.split(",").map(item => item.trim());
+
+            /*
+            forEach 반복문 : 
+            배열.forEach(function(현재요소, 인덱스, 배열 중 필요한거 작성) {
+                필요한 내용 작성 >> 내가 만든 기능은 : <li> 만들어서 추가
+            });
+            */
+
+            arr.forEach(element => {
+                const li = document.createElement("li");
+                li.textContent = element;
+                list.appendChild(li);
+            });
+
+            textbox.value = "";
+        }
+    });
+
+
+    del.addEventListener("click", () => {
+        list.innerHTML = "";
+    });
+</script>

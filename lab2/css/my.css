@@ -1,0 +1,85 @@
+#topLetter{
+    margin: 10px;
+    background-color: #ffffff;
+    font-size: large;
+    font-weight: bold;
+}
+#right{
+    background-color: #ffffff;
+}
+#left{
+    background-color: rgba(255, 255, 255, 0.685);
+}
+.col-2 {
+    text-align: center;
+}
+
+#left ul{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.card.mb-3{
+    margin: 10px;
+}
+
+.dayBox{
+    border: 1px solid #dedede;
+    background-color: #dedede;
+    margin: 10px;
+    border-radius: 8px ;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 15px;
+}
+#viewBtn, #addBtn, #editBtn, #deleteBtn {
+    width: 80px;
+    border: 1px solid #7e7e87;
+    background-color: #7e7e87;
+    color: #ffffff;
+    font-size: small;
+    padding: 3px;
+    border-radius: 7px;
+    margin: 6%;
+}
+
+.second {
+    border: 1px solid #7e7e87;
+    color: #7e7e87;
+    border-radius: 5px;
+    font-size: 70%;
+    padding: 2px;
+    margin-right: 2px;
+}
+
+#ship p {
+    padding-top: 8%;
+    background-color: #ffffff;
+}
+
+/* 전체 탭 스타일 */
+.custom-tabs .nav-link {
+  color: #6c757d;              /* 회색 글씨 */
+  border: 1px solid #dee2e6;   /* 테두리 */
+  border-radius: 5px 5px 0 0;  /* 윗부분 둥글게 */
+  margin-right: 4px;           /* 탭 사이 간격 */
+  background-color: #f8f9fa;   /* 연회색 배경 */
+  font-weight: 500;
+}
+
+/* 반응형: 모바일에서 버튼/배송정보 세로 배치 */
+@media (max-width: 767px) {
+
+    #ship,
+    .col-2:last-child {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #viewBtn, #addBtn, #editBtn, #deleteBtn {
+        width: 100%;       /* 버튼이 한 줄 전체 차지 */
+        margin: 5px 0;     /* 위아래 간격만 */
+        font-size: medium; /* 글씨 조금 키움 */
+    }
+    
+}

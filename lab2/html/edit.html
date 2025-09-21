@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/lab2/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+</head>
+
+<body>
+    <form>
+        <!-- 헤더 -->
+        <div class="container">
+            <header class="d-flex align-items-center p-3 border-bottom">
+                <div class="me-3">
+                    <img src="/lab2/img/교보.png" alt="교보로고" height="40">
+                </div>
+                <input id="input" type="text" class="form-control border-1" placeholder="검색어를 입력해주세요.">
+            </header>
+        </div>
+
+        <!-- 책 정보 (상단) -->
+        <div class="container mt-4">
+            <div class="row">
+                <!-- 왼쪽 -->
+                <div class="col-md-3">
+                    <textarea id="textarea" class="form-control" placeholder="수정할 정보를 입력하세요." required></textarea>
+                </div>
+
+                <!-- 가운데 -->
+                <div class="col-md-6 text-center">
+                    <h2 class="fw-bold">절창</h2>
+                    <p class="text-muted">구병모 장편소설</p>
+                    <img src="/lab2/img/절창 img.jpg" class="img-fluid w-50" alt="책 표지">
+                </div>
+
+                <!-- 오른쪽 -->
+                <div class="col-md-3">
+                    <div class="mb-2">
+                        <textarea id="textarea" class="form-control" placeholder="수정할 정보를 입력하세요." required></textarea>
+                    </div>
+
+                    <p>
+                        <textarea id="textarea" class="form-control" placeholder="수정할 가격을 입력하세요." required></textarea>
+                    </p>
+
+                    <hr>
+
+                    <input id="input" type="text" class="form-control border-1" placeholder="수정할 내용을 입력하세요." required>
+                    <textarea id="shiptextarea" class="form-control" placeholder="수정할 배송정보를 입력하세요." required></textarea>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <!-- 책 소개 (하단) -->
+        <div class="container mt-5">
+            <h5 class="fw-bold">책 소개</h5>
+            <textarea id="textareaEx" class="form-control" placeholder="수정할 소개 내용을 (한글로)입력하세요." required></textarea>
+            <br>
+            <button id="edit" class="btn btn-secondary">수정</button>
+            <button type="reset" class="btn btn-secondary" onclick="deleteBtn()">삭제</button>
+        </div>
+    </form>
+
+</body>
+
+
+</html>
+
+<script>
+
+    const edit = document.getElementById("edit");
+    const textareaEx = document.getElementById("textareaEx");
+
+    const koreanRegex = /^[가-힣\s]+$/;
+    edit.addEventListener("click", () => {
+
+        const value = textareaEx.value.trim();
+
+        if (!koreanRegex.test(textareaEx.value)) {
+            alert("배송정보는 한국어로 입력해주세요.");
+            event.preventDefault();
+            return;
+        }
+        alert("게시물을 수정할까요?");
+    })
+
+    function deleteBtn(){
+        alert("게시물을 삭제할까요?")
+    }
+
+</script>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- 나만의 CSS -->
+    <link rel="stylesheet" href="/lab2/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+</head>
+
+<body>
+  <!-- 헤더 -->
+  <div class="container">
+    <header class="d-flex align-items-center p-3 border-bottom">
+      <div class="me-3">
+        <img src="/lab2/img/교보.png" alt="교보로고" height="40">
+      </div>
+      <input id="input" type="text" class="form-control border-1" placeholder="검색어를 입력해주세요.">
+    </header>
+  </div>
+
+  <!-- 책 정보 (상단) -->
+  <div class="container mt-4">
+    <div class="row">
+      <!-- 왼쪽 -->
+      <div class="col-md-3">
+        <p class="fw-bold">구병모 저자(글)</p>
+        <p class="text-muted">문학동네 · 2025년 09월 17일</p>
+        <p class="text-success">주간베스트 국내도서 5위 · 소설 1위</p>
+      </div>
+
+      <!-- 가운데 -->
+      <div class="col-md-6 text-center">
+        <h2 class="fw-bold">절창</h2>
+        <p class="text-muted">구병모 장편소설</p>
+        <img src="/lab2/img/절창 img.jpg" class="img-fluid w-50" alt="책 표지">
+      </div>
+
+      <!-- 오른쪽 -->
+      <div class="col-md-3">
+        <div class="mb-2">
+          <span class="second">오늘의 선택</span>
+          <span class="second">MD의 선택</span>
+          <span class="second">무료배송</span>
+          <span class="second">이벤트</span>
+          <span class="second">사은품</span>
+          <span class="second">소득공제</span>
+        </div>
+
+        <p>
+          <span class="text-success fw-bold">10%</span>
+          <span class="fw-bold fs-5">16,200원</span>
+          <span class="text-decoration-line-through text-muted small">18,000</span>
+        </p>
+
+        <hr>
+
+        <p><strong>적립/혜택</strong> <span class="text-success fw-bold">900P</span></p>
+        <p><strong>배송안내</strong> <br>무료배송 · 내일(9/22,월) 도착 <br><span class="text-muted">기본배송지 기준</span></p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <!-- 책 소개 (하단) -->
+  <div class="container mt-5">
+    <h5 class="fw-bold">책 소개</h5>
+    <p class="text-muted">이 책이 속한 분야</p>
+    <p>국내도서 > 소설 > 한국소설 > 한국소설일반</p>
+
+    <p class="text-muted">수상내역/미디어추천</p>
+    <p>미디어 추천도서 > 주요일간지소개도서 > 조선일보 > 2025년 9월 2주 선정</p>
+
+    <p><strong>“상처는 사랑의 누룩이다.”</strong><br>
+      오늘의작가상, 김유정문학상, 김현문학패 수상 작가 구병모 신작 장편소설</p>
+
+    <p><strong>상처를 통해 타인을 읽는 한 여인,<br>
+        그리고 타인이라는 영원한 텍스트</strong></p>
+
+    <p>더이상의 수식이 필요치 않은 작가, 그 이름이 하나의 브랜드가 된 구병모의 신작 장편소설 『절창』이 문학동네에서 출간되었다. 장편소설 『파과』로 단단한 서사 장악력을,
+      『네 이웃의 식탁』으로 시대를 감지하는 예리한 시선을, 『상아의 문으로』로 심원한 문학적 상상력을, 소설집 『단 하나의 문장』과 『있을 법한 모든 것』으로 한계 없는 사유의 스펙트럼을 증명해온 구병모. 
+      전 세계 십여 개국에 번역 출간되고 뉴욕타임스 선정 ‘주목할 만한 책 100선’에 선정되었으며 영화화되어 수많은 독자의 사랑을 받은 베스트셀러와 ‘한국문학에 새로운 전망을 제시하는 실험 정신’을 동시에 보유한 그는 
+      문단과 대중 양쪽에서 열렬하고 공고한 지지를 받는 독특한 위치에 자리한 작가다. 
+      그의 신작 『절창』은 누구라도 만족시킬 작품이라 할 만하다.</p>
+
+    <br><hr><br>
+
+    <button type="submit" class="btn btn-secondary" onclick="location.href='/lab2/html/edit.html'">수정</button>
+    <button type="reset" class="btn btn-secondary" onclick="deleteBtn()">삭제</button>
+  </div>
+
+</body>
+
+
+</html>
+
+<script>
+    function deleteBtn(){
+        alert("게시물을 삭제할까요?");
+    }
+</script>
